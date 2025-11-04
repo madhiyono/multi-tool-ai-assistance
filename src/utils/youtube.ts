@@ -1,4 +1,4 @@
-import config from "@/config";
+import config from "../config";
 import { google, youtube_v3 } from "googleapis";
 
 if (!config.youtubeApiKey) {

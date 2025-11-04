@@ -1,13 +1,17 @@
 import { Request, Response } from "express";
 import { PrismaClient, Prisma } from "@prisma/client";
 import { ResponseUtil } from "../utils/response";
+import { type ProductSearchQuery } from "@/types/product.type";
 
 const prisma = new PrismaClient();
 
 /**
  * Search products with filters and pagination
  */
-export const searchProducts = async (req: Request, res: Response) => {
+export const searchProducts = async (
+  req: Request<{}, {}, {}, ProductSearchQuery>,
+  res: Response
+) => {
   try {
     const {
       keyword,

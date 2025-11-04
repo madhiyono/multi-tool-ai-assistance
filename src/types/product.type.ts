@@ -12,3 +12,14 @@ export const CATEGORIES = [
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];
+
+export interface ProductSearchQuery {
+  keyword?: string;
+  category?: Category;
+  subCategory?: string;
+  minPrice?: string;
+  maxPrice?: string;
+  inStock?: string;
+  page?: string;
+  limit?: string;
+}

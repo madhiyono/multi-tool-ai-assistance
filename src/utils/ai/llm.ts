@@ -1,4 +1,4 @@
-import config from "@/config";
+import config from "../../config";
 import { ChatOpenAI } from "@langchain/openai";
 
 if (!config.openRouterApiKey) {
@@ -6,8 +6,8 @@ if (!config.openRouterApiKey) {
 }
 
 export const llm = new ChatOpenAI({
-  model: "openchat/openchat-8b",
-  openAIApiKey: config.openRouterApiKey,
+  model: "minimax/minimax-m2:free",
+  apiKey: config.openRouterApiKey,
   configuration: {
     baseURL: "https://openrouter.ai/api/v1",
     defaultHeaders: {
@@ -16,5 +16,5 @@ export const llm = new ChatOpenAI({
     },
   },
   temperature: 0.3,
-  maxTokens: 2000,
+  maxTokens: 1500,
 });
