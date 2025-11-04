@@ -10,6 +10,10 @@ interface Config {
   rateLimitWindowMs: number;
   rateLimitMaxRequests: number;
   logFormat: string;
+  openRouterApiKey?: string;
+  openRouterSiteUrl: string;
+  openRouterAppName: string;
+  youtubeApiKey?: string;
 }
 
 const config: Config = {
@@ -23,6 +27,11 @@ const config: Config = {
     10
   ),
   logFormat: process.env.LOG_FORMAT || "combined",
+  openRouterApiKey: process.env.OPENROUTER_API_KEY,
+  openRouterSiteUrl: process.env.OPENROUTER_SITE_URL || "http://localhost:8000",
+  openRouterAppName:
+    process.env.OPENROUTER_APP_NAME || "Multi Tool AI Assistance",
+  youtubeApiKey: process.env.YOUTUBE_API_KEY,
 };
 
 export default config;
