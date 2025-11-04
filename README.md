@@ -307,15 +307,41 @@ curl http://localhost:8000/api/v1/health
 
 Interactive API documentation is available at `http://localhost:8000/api-docs` with a user-friendly interface to explore and test all endpoints.
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f10ff66a-519a-4d53-9608-ccb67afaa14a" />
+
 _Swagger UI showing all available endpoints_
 
+<img width="1418" height="510" alt="image" src="https://github.com/user-attachments/assets/b0ae3247-d97a-4081-9f97-379e04d7df19" />
+
+<img width="1417" height="590" alt="image" src="https://github.com/user-attachments/assets/e5d5fbb3-a2ec-4a90-be75-813550a87dfb" />
+
+<img width="1418" height="577" alt="image" src="https://github.com/user-attachments/assets/5bcb59dc-1430-40d8-af51-1be5c4f6e588" />
+
 _Testing the AI chat endpoint directly from Swagger_
+
+<img width="1417" height="702" alt="image" src="https://github.com/user-attachments/assets/5c9255e8-071f-4c28-94f3-8cb53aad080b" />
 
 _Product search endpoint with query parameters_
 
 ### LangSmith Tracing & Monitoring
 
 LangSmith provides detailed tracing of AI agent execution, showing tool calls, reasoning steps, and performance metrics.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0feae24d-ffab-4b3e-b46a-e7fb37dd4a7b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6f4089c3-b11e-47c9-9368-5d0957343794" />
+
+_Ask the AI to get me Japanese Song from Youtube_
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8496926e-07ac-44b0-b04c-c770eedb1b89" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/39c6bfab-10e7-4a22-822a-6d8ffcc0aacf" />
+
+_Ask the AI to get me T-Shirt Product from my Database_
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1e6462cb-e231-48ae-9a88-c7cf96135313" />
+
+_AI General Conversational_
 
 > **Note:** To enable LangSmith tracing, add the following to your `.env` file:
 >
