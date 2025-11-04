@@ -18,7 +18,7 @@ An API that provides multiple AI-powered tools:
 - API documentation with Swagger/OpenAPI
 - Error handling and logging strategies
 - Integrating multiple AI services
-- Database design for e-commerce products
+- Database design with Prisma ORM and MySQL
 - RESTful API design patterns
 
 ## 🚀 Features
@@ -27,6 +27,7 @@ An API that provides multiple AI-powered tools:
 
 - **TypeScript** - Type-safe code
 - **Express.js** - Web framework
+- **Prisma + MySQL** - Database ORM and management
 - **Helmet** - Security headers
 - **CORS** - Cross-origin resource sharing
 - **Rate Limiting** - API protection
@@ -70,7 +71,22 @@ src/
    copy .env.example .env
    ```
 
-3. **Run development server**
+   Edit `.env` with your MySQL credentials.
+
+3. **Set up database**
+
+   ```bash
+   # Generate Prisma Client
+   npm run prisma:generate
+
+   # Run migrations
+   npm run prisma:migrate
+
+   # Seed sample data (optional)
+   npm run db:seed
+   ```
+
+4. **Run development server**
    ```bash
    npm run dev
    ```
@@ -90,10 +106,11 @@ npm start
 
 ## 🌐 Endpoints
 
-- Root: `http://localhost:3000`
-- API Base: `http://localhost:3000/api/v1`
-- Swagger Docs: `http://localhost:3000/api-docs`
-- Health Check: `http://localhost:3000/api/v1/health`
+- Root: `http://localhost:8000`
+- API Base: `http://localhost:8000/api/v1`
+- Swagger Docs: `http://localhost:8000/api-docs`
+- Health Check: `http://localhost:8000/api/v1/health`
+- Database Health: `http://localhost:8000/api/v1/database/health`
 
 ## 📝 License
 

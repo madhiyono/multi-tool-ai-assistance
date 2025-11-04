@@ -36,3 +36,4 @@ coverage/
 
 *.md
 !README.md
+/src/generated/prisma

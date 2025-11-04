@@ -1,6 +1,7 @@
 import { Server } from "http";
 import createApp from "./app";
 import config from "./config";
+import prisma from "./utils/prisma";
 
 /**
  * Start the server
@@ -20,13 +21,21 @@ const startServer = (): Server => {
     console.log(
       `🏥 Health Check: http://localhost:${config.port}${config.apiPrefix}/health`
     );
+    console.log(
+      `🗄️  Database Health: http://localhost:${config.port}${config.apiPrefix}/database/health`
+    );
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
     console.log("");
   });
 
   // Graceful shutdown
-  const gracefulShutdown = (signal: string) => {
+  const gracefulShutdown = async (signal: string) => {
     console.log(`\n${signal} received. Starting graceful shutdown...`);
+
+    // Disconnect Prisma
+    await prisma.$disconnect();
+    console.log("🗄️  Database disconnected");
+
     server.close(() => {
       console.log("✅ Server closed successfully");
       process.exit(0);
